@@ -24,7 +24,9 @@ app.get("/start", (req, res) => {
 app.post("/start/request", bodyParser, async (req, res) => {
   if (!requestNumbers.starting && req.body.iterations) {
     requestNumbers.starting = true;
+    console.time("Tempo de requisição");
     await requestNumbers.requestMultiple(0, req.body.iterations);
+    console.timeEnd("Tempo de requisição");
     res.redirect("/");
   } else {
     res.redirect("/");
