@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mohave:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+    *{ font-family: 'Roboto', sans-serif;}
+    span{font-size: 14px;
+    color: gray;}
+    
+    </style>
+</head>
+<body>
+    <h1>Configuração para a requisição:</h1>
+    <br>
+    <h3>Ao clicar start, aguarde. Quando finalizar as requisições você será redirecionado</h3>
+    <form name="form1" method="POST" action="/start/request">
+    <table>
+        <tr>
+        <td>Requisições simultâneas: </td>
+        <td><input type="number" name="iterations" min="0"></td>
+        <td><span>valor padrão 5</span></td>
+        </tr>
+        <tr>
+        <td colspan="2"><input type="submit" value="Start!" ></td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
