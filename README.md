@@ -17,12 +17,12 @@
 ### a. Tempo de execução da requisição:
 
 A API indicada no desafio é consumida pela média de 1 minuto:
-[image](https://cdn.discordapp.com/attachments/869339288041558067/917520089870368778/unknown.png)
+![image](https://cdn.discordapp.com/attachments/869339288041558067/917520089870368778/unknown.png)
 
 ### b. Forma de execução da requisição:
 
 A aplicação pode realizar requisições simultâneas conforme opção feita pelo usuário na view, conforme abaixo:
-[image](https://cdn.discordapp.com/attachments/869339288041558067/917520304778141786/unknown.png)
+![image](https://cdn.discordapp.com/attachments/869339288041558067/917520304778141786/unknown.png)
 
 O máximo de requisições permitidas, conforme verificado nas próprias instruções da view, é de 1000.
 A realização de 1000 requisições simultâneas permite que a API do Desafio possa ser consumida na média de 1 minuto.
