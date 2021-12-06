@@ -31,18 +31,18 @@ A realização de 1000 requisições simultâneas permite que a API do Desafio p
 
 Faça uma cópia do projeto no respositório do GitHub: https://github.com/silasms/desafio-cross-commerce
 ```
-git clone https://github.com/silasms/desafio-cross-commerce.git
+$ git clone https://github.com/silasms/desafio-cross-commerce.git
 ```
 
 Posteriormente, execute o gerenciador de pacotes npm para a instalação das libs:
 ```
-npm i
+$ npm i
 ```
 
 Ao final, para inicializar o servidor, acesse à pasta source (src) e execute o seguinte comando:
 ```
-cd src
-nodemon server
+$ cd src
+$ nodemon server
 ```
 
 Pronto! A instalação está concluída e a requisição pode ser executada no formulário constante na url http://localhost:4000/start.
