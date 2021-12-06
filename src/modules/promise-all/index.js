@@ -1,4 +1,4 @@
-const async = require("async");
+const asyncLib = require("async");
 const persistRequest = require("../persist-request/index");
 
 const promiseAll = (promises) => {
@@ -16,7 +16,7 @@ const promiseAll = (promises) => {
           });
       };
     });
-    async.parallel(parallelCalls, (_, results) => {
+    asyncLib.parallel(parallelCalls, (_, results) => {
       resolve(results.filter((result) => result));
     });
   });

@@ -4,8 +4,12 @@ const promiseAll = require("../../modules/promise-all/index.js");
 
 const objNumber = {};
 objNumber.numbers = [];
+let starting;
 
 const requestMultiple = async (numInitial = 0, iterations = 5) => {
+  if (iterations > 1000) {
+    iterations = 1000;
+  }
   if (!numInitial) {
     numInitial = 0;
   }
@@ -20,9 +24,9 @@ const requestMultiple = async (numInitial = 0, iterations = 5) => {
     links.push(
       `http://challenge.dienekes.com.br/api/numbers?page=${i + numInitial}`
     );
-    acc = numInitial;
   }
-
+  acc = numInitial;
+  acc += iterations;
   try {
     const responses = await promiseAll(
       links.map((value) => {
@@ -42,22 +46,23 @@ const requestMultiple = async (numInitial = 0, iterations = 5) => {
       );
       responses.push(...responsesAgain);
     }
-    const verifyFuturesRequests = await axios.get(
+    for (const element of responses) {
+      objNumber.numbers.push(...element.data.numbers);
+      if (!element.data.numbers) {
+        break;
+      }
+    }
+    const futureRequest = await axios.get(
       `http://challenge.dienekes.com.br/api/numbers?page=${acc + 1}`
     );
-    for (const element of responses) {
-      if (verifyFuturesRequests.data.numbers[0]) {
-        objNumber.numbers.push(...element.data.numbers);
-      } else {
-        objNumber.numbers = sort(objNumber.numbers);
-        return;
-      }
+    if (!futureRequest.data.numbers[0]) {
+      objNumber.numbers = sort(objNumber.numbers);
+      return;
     }
   } catch (err) {
     throw new Error(err.message);
   }
-  acc += iterations;
   await requestMultiple(acc, iterations);
 };
 
-module.exports = { objNumber, requestMultiple };
+module.exports = { objNumber, requestMultiple, starting };

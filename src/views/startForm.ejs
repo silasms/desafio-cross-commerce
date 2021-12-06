@@ -18,11 +18,15 @@
     <h1>Configuração para a requisição:</h1>
     <br>
     <h3>Ao clicar start, aguarde. Quando finalizar as requisições você será redirecionado</h3>
+    <h3>Instruções:</h3>
+    <p>*Ideal utilizar números pares, múltiplos de 1000</p>
+    <p>* Valor mínimo: 1</p>
+    <p>* Valor máximo: 1000</p>
     <form name="form1" method="POST" action="/start/request">
     <table>
         <tr>
         <td>Requisições simultâneas: </td>
-        <td><input type="number" name="iterations" min="0"></td>
+        <td><input type="number" name="iterations" min="1" max="1000"></td>
         <td><span>valor padrão 5</span></td>
         </tr>
         <tr>

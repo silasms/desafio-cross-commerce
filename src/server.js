@@ -22,8 +22,13 @@ app.get("/start", (req, res) => {
 });
 
 app.post("/start/request", bodyParser, async (req, res) => {
-  await requestNumbers.requestMultiple(0, req.body.iterations);
-  res.redirect("/");
+  if (!requestNumbers.starting && req.body.iterations) {
+    requestNumbers.starting = true;
+    await requestNumbers.requestMultiple(0, req.body.iterations);
+    res.redirect("/");
+  } else {
+    res.redirect("/");
+  }
 });
 
 app.listen(4000, function (err) {
