@@ -25,7 +25,8 @@ A aplicação pode realizar requisições simultâneas conforme opção feita pe
 ![image](https://cdn.discordapp.com/attachments/869339288041558067/917520304778141786/unknown.png)
 
 O máximo de requisições permitidas, conforme verificado nas próprias instruções da view, é de 1000.
-A realização de 1000 requisições simultâneas permite que a API do Desafio possa ser consumida na média de 1 minuto.
+A realização de 1000 requisições simultâneas permite que a API do Desafio possa ser consumida na média de 1 minuto. Após a solicitação da requisição, aguarde até que seja transferido para uma janela com a exposição de todos os números ordenados, ficando da seguinte maneira abaixo:
+![image](https://cdn.discordapp.com/attachments/869339288041558067/917520776054329354/unknown.png)
 
 ## 3. Instalando o projeto:
 
@@ -46,3 +47,8 @@ $ nodemon server
 ```
 
 Pronto! A instalação está concluída e a requisição pode ser executada no formulário constante na url http://localhost:4000/start.
+
+Se quiser fazer o uso do postman para a requisição, basta elaborar uma solicitação via json pela seguinte estrutura:
+![image](https://cdn.discordapp.com/attachments/869339288041558067/917520015257915392/unknown.png)
+
+Após isso, basta aguardar a requisição ser finalizada e automaticamente será enviado para página com todas as requisições ordenadamente.
