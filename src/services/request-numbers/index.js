@@ -42,14 +42,14 @@ const requestMultiple = async (numInitial = 0, iterations = 5) => {
       );
       responses.push(...responsesAgain);
     }
-
+    const verifyFuturesRequests = await axios.get(
+      `http://challenge.dienekes.com.br/api/numbers?page=${acc + 1}`
+    );
     for (const element of responses) {
-      if (element.data.numbers[1]) {
+      if (verifyFuturesRequests.data.numbers[0]) {
         objNumber.numbers.push(...element.data.numbers);
       } else {
         objNumber.numbers = sort(objNumber.numbers);
-        console.log("finalizado");
-        console.log(objNumber.numbers.length);
         return;
       }
     }
@@ -57,7 +57,6 @@ const requestMultiple = async (numInitial = 0, iterations = 5) => {
     throw new Error(err.message);
   }
   acc += iterations;
-  console.log(`Faltam: ${acc} requests`);
   await requestMultiple(acc, iterations);
 };
 
