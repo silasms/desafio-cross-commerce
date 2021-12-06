@@ -51,4 +51,4 @@ Pronto! A instalação está concluída e a requisição pode ser executada no f
 Se quiser fazer o uso do postman para a requisição, basta elaborar uma solicitação via json pela seguinte estrutura:
 ![image](https://cdn.discordapp.com/attachments/869339288041558067/917520015257915392/unknown.png)
 
-Após isso, basta aguardar a requisição ser finalizada e automaticamente será enviado para página com todas as requisições ordenadamente.
+Após isso, basta aguardar a requisição ser finalizada e automaticamente será enviado para página com todos os números das requisições de forma ordenada.
