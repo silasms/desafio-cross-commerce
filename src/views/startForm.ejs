@@ -19,15 +19,16 @@
     <br>
     <h3>Ao clicar start, aguarde. Quando finalizar as requisições você será redirecionado</h3>
     <h3>Instruções:</h3>
-    <p>*Ideal utilizar números pares, múltiplos de 1000</p>
+    <p>*Ideal utilizar números pares, múltiplos de 10000</p>
     <p>* Valor mínimo: 1</p>
     <p>* Valor máximo: 1000</p>
+    <p>* Quanto maior o número de requisições simultâneas, mais rápido será os requests</p>
     <form name="form1" method="POST" action="/start/request">
     <table>
         <tr>
         <td>Requisições simultâneas: </td>
-        <td><input type="number" name="iterations" min="1" max="1000"></td>
-        <td><span>valor padrão 5</span></td>
+        <td><input type="number" name="iterations" min="1" max="10000"></td>
+        <td><span>valor padrão 1000</span></td>
         </tr>
         <tr>
         <td colspan="2"><input type="submit" value="Start!" ></td>

@@ -16,7 +16,7 @@
 
 ### a. Tempo de execução da requisição:
 
-A API indicada no desafio é consumida pela média de 1 minuto:
+A API indicada no desafio é consumida pela média de 1 minuto, com 1000 requisições simultâneas:
 ![image](https://cdn.discordapp.com/attachments/869339288041558067/917520089870368778/unknown.png)
 
 ### b. Forma de execução da requisição:
