@@ -38,11 +38,9 @@ const requestMultiple = async (numInitial = 0, iterations = 1000) => {
       `http://challenge.dienekes.com.br/api/numbers?page=${acc + 1}`
     );
     if (!futureRequest.data.numbers[0]) {
-      console.log(objNumber.numbers.length)
       objNumber.numbers = sort(objNumber.numbers);
       return;
     }
-    console.log(acc)
   } catch (err) {
   }
   await requestMultiple(acc, iterations);
