@@ -1,5 +1,4 @@
 const asyncLib = require("async");
-const persistRequest = require("../persist-request/index");
 
 const promiseAll = (promises) => {
   return new Promise((resolve) => {

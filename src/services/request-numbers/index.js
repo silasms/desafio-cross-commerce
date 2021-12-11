@@ -1,6 +1,5 @@
 const axios = require("axios");
 const sort = require("../../modules/sort/index");
-const promiseAll = require("../../modules/promise-all/index.js");
 const persistRequest = require("../../modules/persist-request/index");
 const { multiplyPersistRequest } = require("../../modules/multiply-persist-request");
 
