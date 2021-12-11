@@ -10,9 +10,7 @@ const promiseAll = (promises) => {
             return done(null, result);
           })
           .catch((error) => {
-            persistRequest(error.config.url).then((response) => {
-              done(null, response);
-            });
+            done()
           });
       };
     });
