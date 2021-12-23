@@ -16,7 +16,7 @@
 
 ### a. Tempo de execução da requisição:
 
-A API indicada no desafio é consumida pela média de 40 segundos, com 10000 requisições simultâneas. 
+A API indicada no desafio é consumida pela média de 40 segundos, com 10000 requisições simultâneas.
 Aqui está um exemplo:<br>
 ![image](https://cdn.discordapp.com/attachments/869339288041558067/918895633824383066/unknown.png)
 
@@ -50,6 +50,6 @@ $ nodemon server
 Pronto! A instalação está concluída e a requisição pode ser executada no formulário constante na url http://localhost:4000/start.
 
 Se quiser fazer o uso do postman para a requisição, basta elaborar uma solicitação via json pela seguinte estrutura:
-![image](https://cdn.discordapp.com/attachments/869339288041558067/917520015257915392/unknown.png)
+![image](https://cdn.discordapp.com/attachments/696103592913797141/923721534701461555/unknown.png)
 
 Após isso, basta aguardar a requisição ser finalizada e automaticamente será enviado para página com todos os números das requisições de forma ordenada.
