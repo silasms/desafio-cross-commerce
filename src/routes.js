@@ -7,6 +7,6 @@ const bodyParser = require("body-parser").json();
 route.get("/", responseNumbers)
 
 route.get("/start", start)
-route.post("/start/request", bodyParser, formRequest)
+route.post("/start", bodyParser, formRequest)
 
 module.exports = route
